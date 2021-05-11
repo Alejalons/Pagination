@@ -3,6 +3,7 @@ import heroes from './Data';
 
 const usePagination = ()  => {
     
+    const countHero = heroes.length;
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(2); //numero de items
 
@@ -14,7 +15,7 @@ const usePagination = ()  => {
     const paginate = pageNumber => setCurrentPage(pageNumber);
     
 
-    return {currentPosts, postsPerPage, heroes, paginate}
+    return {currentPosts, postsPerPage, countHero, paginate}
     // const {currentPosts, postsPerPage, heroes, paginate} = usePagination();
 
 }

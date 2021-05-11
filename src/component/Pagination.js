@@ -5,12 +5,10 @@ import Pagination from '@material-ui/lab/Pagination';
 
 const PaginationComponent = ({ postsPerPage, totalPosts, paginate}) => {
 
-
-
     const countNumber = totalPosts / postsPerPage;
     const [page, setPage] = React.useState(1);
 
-    const handleChange = (event, value) => {
+    const handleChange = (value) => {
         
         setPage(value);
         paginate(page);

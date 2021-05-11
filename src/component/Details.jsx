@@ -6,7 +6,7 @@ import usePagination from './FunctionPagination';
 
 function Details() {
 
-    const {currentPosts, postsPerPage, heroes, paginate} = usePagination();
+    const {currentPosts, postsPerPage, countHero, paginate} = usePagination();
     
     return (
         <>
@@ -16,7 +16,7 @@ function Details() {
 
             <PaginationComponent
                 postsPerPage={postsPerPage}
-                totalPosts={heroes.length}
+                totalPosts={countHero}
                 paginate={paginate}
             />
         </>
